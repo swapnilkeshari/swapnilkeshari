@@ -47,8 +47,49 @@
   color: var(--jet);
 }
 
+.poem-list,
+.poem-card {
+  display: grid;
+}
+
+.poem-list {
+  gap: 50px;
+}
+
+.poem-card {
+  gap: 25px;
+}
 
 
+.poem-card .card-banner {
+  position: relative;
+  border: 2px solid var(--jet);
+  box-shadow: 0 0 0 var(--jet);
+  transition: var(--transition-1);
+}
+
+.poem-card .card-banner:is(:hover, :focus-within) {
+  box-shadow: 3px 3px 0 var(--jet);
+}
+
+.poem-card .btn-icon {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background-color: var(--white);
+  color: var(--jet);
+  font-size: 2rem;
+  padding: 8px;
+  border: 2px solid var(--jet);
+  opacity: 0;
+  transition: var(--transition-1);
+  will-change: transform;
+}
+
+.poem-card .card-banner:is(:hover, :focus-within) .btn-icon {
+  transform: translateX(15px);
+  opacity: 1;
+}
 
 
 /* ?============= MEDIA QUERIES =============?*/
